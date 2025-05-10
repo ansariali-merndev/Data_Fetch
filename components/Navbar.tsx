@@ -14,6 +14,7 @@ export default function Navbar() {
     { label: "Todos", href: "/todos" },
     { label: "Seq_Res", href: "/seq_res" },
     { label: "Parallel_Res", href: "/parallel_res" },
+    { label: "Services", href: "/services" },
   ];
   const pathname = usePathname();
 
