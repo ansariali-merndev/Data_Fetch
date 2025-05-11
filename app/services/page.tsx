@@ -1,24 +1,24 @@
-"use client";
 import ServiceList from "@/components/ServiceList";
+import ServiceItem from "@/components/ServicesItem";
 
 export default function Services() {
   const services: string[] = [
     "Web Development",
     "App Development",
-    "Full Stack Develpent",
-    "Cloud Enginner",
-    "Fronted Enginner",
+    "Full Stack Development",
+    "Cloud Engineer",
+    "Frontend Engineer",
   ];
   return (
     <section className="mx-20 my-10">
       <h2 className="text-center text-4xl capitalize font-semibold">
-        All Services Here
+        Our Services
       </h2>
-      <ul className="flex flex-col items-center mt-8">
+      <ServiceList>
         {services.map((item: string, index: number) => (
-          <ServiceList key={index} service={item} />
+          <ServiceItem key={index} serviceName={item} />
         ))}
-      </ul>
+      </ServiceList>
     </section>
   );
 }

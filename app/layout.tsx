@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ThemeProvider from "@/context/ThemeContext";
 
 type props = {
   children: React.ReactNode;
@@ -22,9 +23,11 @@ export default function RootLayout({ children }: props) {
   return (
     <html lang="en">
       <body className={urbanist.className}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
